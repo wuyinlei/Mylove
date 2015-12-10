@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <com.example.ruolan.letgo.widget.LetToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        app:leftButtonIcon="@drawable/icon_back_32px"
+        app:title="@string/home"
+        app:isShowSearchView="false">
+    </com.example.ruolan.letgo.widget.LetToolBar><FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_weight="1"
+        android:background="@color/bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"/>
+
+    <com.example.ruolan.letgo.widget.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_weight="0"
+            android:id="@android:id/tabcontent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"></FrameLayout>
+    </com.example.ruolan.letgo.widget.FragmentTabHost>
+</LinearLayout>
